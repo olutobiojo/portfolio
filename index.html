@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img
+            src="/Users/macos/Desktop/My portfolio/images/tobi-logo (1).png"
+            alt=""
+            class="logo"
+          />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contant</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>WEB DEVELOPER</p>
+          <h1>Hi I'm <span>Oluwatobiloba</span> <br />Ojo from Nigeria</h1>
+        </div>
+      </div>
+    </div>
+    <!---------about--------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="/Users/macos/Desktop/My portfolio/images/bg.jpg" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I’m a Front-End Developer located in Nigeria. I have a serious
+              passion for UI effects, animations and creating intuitive, dynamic
+              user experiences.
+            </p>
+            <p>
+              I design and code beautifully simple things, and I love what I do.
+            </p>
+            <p>
+              I like to code things from scratch, and enjoy bringing ideas to
+              life in the browser.
+            </p>
+            <p>
+              I work to make a better web; one that is fast, easy to use,
+              beautiful, accessible to all, and frustration-free. Regardless of
+              your specific business requirements, in solving these challenges,
+              you have a great chance of finding success online.
+            </p>
+            <p>
+              My clients have found that hiring me has saved them time and
+              money, made it easier to grow their website alongside their
+              business, and made for a product that is consistently of high
+              quality.
+            </p>
+            <p>
+              I use HTML, CSS, and JavaScript to produce responsive websites and
+              web apps that provide users the best and most appropriate
+              experience suited to their device and browser.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web Developer</span><br />Web App Developer</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>May, 2022 - current</span><br />Web Developer at
+                  AdeotiLLC
+                </li>
+                <li>
+                  <span>Oct, 2022</span><br />Built a website for Big
+                  Neighborhood Global Services LTD
+                </li>
+                <li>
+                  <span>Sep, 2022</span><br />Built a website for A.O. Olalekan
+                  & Co
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>Web Developer</span><br />Web App Developer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(skills) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById("skills").classList.add("active-tab");
+      }
+
+      function opentab(experience) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById("experience").classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
